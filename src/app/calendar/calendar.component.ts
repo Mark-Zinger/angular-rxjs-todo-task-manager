@@ -24,10 +24,7 @@ export class CalendarComponent implements OnInit {
   calendar: Week[]
 
 
-  constructor( private dateService: DateService) {
-    this.calendar = [];
-    console.log('test')
-  }
+  constructor( private dateService: DateService) {}
 
   ngOnInit(): void {
     this.dateService.date.subscribe(this.generate.bind(this))
